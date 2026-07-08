@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+  This is Project #1: an "About Me" page.
+  Read the comments (the lines that start with <!-- ) as you go —
+  they explain WHY each part exists, not just what it does.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+
+  <style>
+    /* ============================================
+       CSS lives here between <style> tags.
+       Later you'll move this into its own .css file —
+       for now, keeping it in one file is easier to follow.
+       ============================================ */
+
+    /* Reset some default browser spacing so we start from a clean slate */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* makes width/padding math predictable */
+    }
+
+    body {
+      font-family: 'Georgia', serif; /* body/reading font */
+      background-color: #FAF7F2;
+      color: #2B2A28;
+      line-height: 1.6; /* space between lines of text, easier to read */
+    }
+
+    /* The top banner section */
+    header {
+      background-color: #020c0e; /* deep teal */
+      color: #FAF7F2;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif; /* different font for headings = intentional contrast */
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #C9A66B; /* warm gold accent, used sparingly */
+    }
+
+    /* A reusable "card" style — a contained block with padding */
+    main {
+      max-width: 700px;
+      margin: 0 auto; /* centers the block horizontally */
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #1F3A3D;
+      border-bottom: 2px solid #C9A66B;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    /* Flexbox demo: lays skills out in a horizontal, wrapping row */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap; /* lets items drop to the next line on small screens */
+      gap: 10px;
+      list-style: none; /* remove default bullet points */
+    }
+
+    .skills-list li {
+      background-color: #061719;
+      color: #857964;
+      padding: 8px 16px;
+      border-radius: 20px; /* rounded pill shape */
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #739396;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #5c513f; /* changes color when you hover — try it! */
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bcb39a;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive design: on small screens (phones), shrink the heading */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER: the top of the page. Every page usually has one. -->
+  <header>
+    <h1>Aakanksha</h1>
+    <p>Aspiring Frontend Developer</p>
+  </header>
+
+  <!-- MAIN: the primary content of the page -->
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm learning to build for the web. This page is my very first
+        project — built with plain HTML and CSS. Replace this text with
+        a couple of sentences about yourself: where you're from, what
+        you're curious about, or what got you into coding.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills I'm Learning</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript (soon!)</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <p>
+        Email me at
+        <a href="mailto:you@example.com">you@example.com</a>
+        or find me on
+        <a href="https://github.com/" target="_blank">GitHub</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: the bottom of the page -->
+  <footer>
+    <p>&copy; 2026 Your Name. Built while learning to code.</p>
+  </footer>
+
+</body>
+</html>
